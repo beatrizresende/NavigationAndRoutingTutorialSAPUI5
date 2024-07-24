@@ -9,6 +9,7 @@ sap.ui.define([
 			oRouter = this.getRouter();
 			oTarget = oRouter.getTarget("notFound");
 			oTarget.attachDisplay(function (oEvent) {
+				console.log(oEvent)
 				this._oData = oEvent.getParameter("data");	// store the data
 			}, this);
 		},
@@ -25,6 +26,5 @@ sap.ui.define([
 			// call the parent's onNavBack
 			BaseController.prototype.onNavBack.apply(this, arguments);
 		}
-       }
     });
- });
+});
